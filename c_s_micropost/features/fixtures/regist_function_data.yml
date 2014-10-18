@@ -1,0 +1,32 @@
+r_name:     zangxin
+# r_email:  beibei001@126.com
+r_password: 111111
+
+w_name:      123456789012345678901234567890123456789012345678901
+w_email:     sdrrsrsdfsdf
+w_email_had: fxc@126.com
+w_password:  2
+
+
+name_blank:         "* Name can't be blank"
+name_too_long:      "* Name is too long (maximum is 50 characters)"
+email_blank:        "* Email can't be blank"
+email_invalid:      "* Email is invalid"
+password_blank:     "* Password can't be blank"
+password_too_short: "* Password is too short (minimum is 6 characters)"
+password_no_match:  "* Password doesn't match confirmation"
+email_has_regist:   "* Email has already been taken"
+regist_success_msg: "Welcome to the Sample App!"
+
+save_path:
+    name_blank:         screenshots/regist_function/name_blank_error.png
+    name_too_long:      screenshots/regist_function/name_too_long_error.png
+    email_blank:        screenshots/regist_function/email_blank_error.png
+    email_invalid:      screenshots/regist_function/email_invalid_error.png
+    password_blank:     screenshots/regist_function/password_blank_error.png
+    password_too_short: screenshots/regist_function/password_too_short_error.png
+    password_no_match:  screenshots/regist_function/password_no_match_error.png
+    email_has_regist:   screenshots/regist_function/email_has_regist_error.png
+    regist_success_msg: screenshots/regist_function/regist_success_msg.png
+
+

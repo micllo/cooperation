@@ -1,0 +1,17 @@
+
+user_url: /users
+profile_url: /users/101
+setting_url: /users/101/edit
+
+unlogin_error_msg: Please sign in.
+delete_success_msg: User destroy
+
+admin_email: administrator@126.com
+admin_password: 111111
+
+user_email: fxc@126.com
+user_password: 111111
+
+
+save_path: 
+    unlogin_error_msg: screenshots/user_authority/请先登录.png

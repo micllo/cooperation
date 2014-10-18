@@ -1,0 +1,49 @@
+#【 设 置 profile（ 运 行 方 式 ）】
+
+
+#【 运 行 格 式 】
+default:         --require features
+stepdefs_format: -f stepdefs --require features
+usage_format:    -f usage --require features
+
+
+#【 场 景 过 滤 】
+login_function:  --name 登录功能测试 --require features
+regist_function: --name 注册功能测试 --require features
+send_function:   --name 发送微博功能测试 --require features
+user_authority:  --name 用户权限功能测试 --require features
+link_redirect:   --name 链接跳转功能测试 --require features
+follow_function: --name 关注功能测试 --require features
+
+
+#【 标 签 过 滤 】
+login_link_tags:         --tags @login,@link --require features
+login_link_fast_tags:    --tags @login,@link --tags @fast --require features
+login_link_no_slow_tags: --tags @login,@link --tags ~@slow --require features
+link_tags_limit:         --tags @link:3 --require features
+
+
+#【 HTML 测 试 报 告 】
+all_function_report:    -f html --out reports/html_report.html --require features
+login_function_report:  --name 登录功能测试 -f html --out reports/html_report.html --require features
+regist_function_report: --name 注册功能测试 -f html --out reports/html_report.html --require features
+send_function_report:   --name 发送微博功能测试 -f html --out reports/html_report.html --require features
+user_authority_report:  --name 用户权限功能测试 -f html --out reports/html_report.html --require features
+link_redirect_report:   --name 链接跳转功能测试 -f html --out reports/html_report.html --require features
+follow_function_report: --name 关注功能测试 -f html --out reports/html_report.html --require features
+
+
+#【 PrettyFace 测 试 报 告 】
+all_function_PF_report:    -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+login_function_PF_report:  --name 登录功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+regist_function_PF_report: --name 注册功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+send_function_PF_report:   --name 发送微博功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+user_authority_PF_report:  --name 用户权限功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+link_redirect_PF_report:   --name 链接跳转功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+follow_function_PF_report: --name 关注功能测试 -f PrettyFace::Formatter::Html --out reports/prettyface_report.html --require features
+
+
+
+
+
+

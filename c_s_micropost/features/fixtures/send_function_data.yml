@@ -1,0 +1,9 @@
+
+micropost: fxc成功发送了一条微博 。。。。
+
+send_success_msg: Micropost create!
+
+save_path:
+    send_success_msg: screenshots/send_function/验证微博发布成功.png
+
+

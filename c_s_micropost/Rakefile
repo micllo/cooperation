@@ -1,0 +1,98 @@
+# encoding:utf-8
+
+# 从 Rake 运 行 Cucumber
+require 'cucumber/rake/task'
+
+
+#【 测 试 代 码 覆 盖 率 】
+Cucumber::Rake::Task.new do |t|
+	t.rcov = true
+end
+
+
+#【 运 行 格 式 】
+
+# 定义一个名为cucumber的task
+Cucumber::Rake::Task.new
+
+# 定义一个名为'stepdefs_format'的task
+Cucumber::Rake::Task.new('stepdefs_format') do |t|
+	t.cucumber_opts = %w(--require features --format stepdefs)
+end
+
+Cucumber::Rake::Task.new('usage_format') do |t|
+	t.cucumber_opts = %w(--require features --format usage)
+end
+
+
+
+#【 场 景 过 滤 】
+Cucumber::Rake::Task.new('login_function') do |t|
+	t.cucumber_opts = %w(--require features --name 登录功能测试)
+end
+Cucumber::Rake::Task.new('regist_function') do |t|
+	t.cucumber_opts = %w(--require features --name 注册功能测试)
+end
+Cucumber::Rake::Task.new('send_function') do |t|
+	t.cucumber_opts = %w(--require features --name 发送微博功能测试)
+end
+Cucumber::Rake::Task.new('user_authority') do |t|
+	t.cucumber_opts = %w(--require features --name 用户权限功能测试)
+end
+Cucumber::Rake::Task.new('link_redirect') do |t|
+	t.cucumber_opts = %w(--require features --name 链接跳转功能测试)
+end
+Cucumber::Rake::Task.new('follow_function') do |t|
+	t.cucumber_opts = %w(--require features --name 关注功能测试)
+end
+
+
+
+#【 标 签 过 滤 】
+Cucumber::Rake::Task.new('login_link_tags') do |t|
+	t.cucumber_opts = %w(--require features --tags @login,@link)
+end
+Cucumber::Rake::Task.new('login_link_fast_tags') do |t|
+	t.cucumber_opts = %w(--require features --tags @login,@link --tags @fast)
+end
+Cucumber::Rake::Task.new('login_link_no_slow_tags') do |t|
+	t.cucumber_opts = %w(--require features --tags @login,@link --tags ~@slow)
+end
+Cucumber::Rake::Task.new('link_tags_limit') do |t|
+	t.cucumber_opts = %w(--require features --tags @link:3)
+end
+
+
+
+#【 测 试 报 告 】
+Cucumber::Rake::Task.new('all_function_report') do |t|
+	t.cucumber_opts = %w(--require features -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('login_function_report') do |t|
+	t.cucumber_opts = %w(--require features --name 登录功能测试 -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('regist_function_report') do |t|
+	t.cucumber_opts = %w(--require features --name 注册功能测试 -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('send_function_report') do |t|
+	t.cucumber_opts = %w(--require features --name 发送微博功能测试 -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('user_authority_report') do |t|
+	t.cucumber_opts = %w(--require features --name 用户权限功能测试 -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('link_redirect_report') do |t|
+	t.cucumber_opts = %w(--require features --name 链接跳转功能测试 -f html --out reports/test_report.html)
+end
+Cucumber::Rake::Task.new('follow_function_report') do |t|
+	t.cucumber_opts = %w(--require features --name 关注功能测试 -f html --out reports/test_report.html)
+end
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+#【 浏 览 器 】
+driver: :chrome
+
+#【 启 动 模 式 】
+mode: local
+# mode: remote
+
+#【 远 程 服 务 器 名 】
+# 虚拟机：xp
+# server: 10.211.55.4
+# 虚拟机：win7
+# server: 10.211.55.6
+# 家里：xp
+# server: 192.168.0.105
+
+
+#【 测 试 地 址 】
+env_host: http://localhost:3000
+# env_host: http://192.168.0.141:3000
+# env_host: http://192.168.0.101:3000
+
+
+#【 浏 览 器 最 大 化 】
+max: false
+# max: true
+
+
+#【 浏 览 器 打 开 尺 寸 】
+x: 1000
+y: 400
+
+
+#【 regist_function_spec 】
+# 注册时的email
+r_email: shishi009@126.com
+
+
+#【 follow_function_spec 】
+# 批量注册所需的 email 和 num（注册和删除的数量一致）
+# 以第一个用户登录所需的 emial 和 password
+# 管理员批量删用户所的 email 和 password
+string: user
+num: 2
+email: user_1@126.com
+password: 111111
+admin_email: administrator@126.com
+admin_password: 111111
+
+
+
+
+
+
+
+
